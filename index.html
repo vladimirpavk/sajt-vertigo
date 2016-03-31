@@ -74,7 +74,7 @@
     </header>
                 
     <article class="article_general bela_pozadina slika_art">                
-        <img src="images/hotel.jpg" alt="Hotel">
+        <a href="images/hotel.jpg" class="gallery" title="Slika hotel spreda"><img src="images/hotel.jpg" alt="Hotel"></a>
         <p><span>Vila "VERTIGO" - Beograd</span> raspolaže sa 43 sobe, kapaciteta 110 ležajeva različitih struktura od dvokrevetnih do osmokrevetnih.
            <br><br class="vidljivo">Sve sobe su klimatizovane, sa sopstvenim kupatilom, toplom vodom 24h, centralnim grejanjem i LCD televizorom sa kablovskom televizijom.
            <br><br class="vidljivo">Kompletan objekat je pokriven besplatnim bežičnim internetom.
@@ -89,7 +89,7 @@
    <section class="crna_pozadina">
        
     <article class="article_general crna_pozadina slika_desno_m" style="margin: 0px; margin-bottom: 10px; padding: 0px;">                
-        <img src="images/usluge_1.jpg" alt="slika kafic">
+        <a href="images/usluge_1.jpg" class="gallery" title="Slika hotel spreda"><img src="images/usluge_1.jpg" alt="slika kafic"></a>
         <p><span>Vila "VERTIGO" - Beograd</span> raspolaže sa 43 sobe, kapaciteta 110 ležajeva različitih struktura od dvokrevetnih do osmokrevetnih.
            <br><br class="vidljivo">Sve sobe su klimatizovane, sa sopstvenim kupatilom, toplom vodom 24h, centralnim grejanjem i LCD televizorom sa kablovskom televizijom.
         </p>        
@@ -205,12 +205,14 @@
          function(){
              $('#burger').click(
                  function(evt){
-                     console.log("Bruger clicked...")
+                     /*console.log("Bruger clicked...")
                      console.log(evt);
-                     //$('#gl_meni').toggleClass('prikazi');
+                     $('#gl_meni').toggleClass('prikazi');*/
                      $('#gl_meni').slideToggle(); 
                 }
              )
+             
+             $('a.gallery').fancybox();
          }
      );
      
@@ -226,6 +228,8 @@
              $('#burger').bind('mouseover', eventHandler);
              $('html').bind('click', eventHandler);         
      });*/
+ 
+    
  
 </script>
 
