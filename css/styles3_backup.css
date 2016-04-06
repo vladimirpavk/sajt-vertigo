@@ -16,6 +16,11 @@ header{
     margin-bottom: 20px;  
 }
 
+div{
+    margin: 0px;
+    padding: 0px;
+}
+
 article.logo img{
    display: block;
    margin: auto;
@@ -236,7 +241,21 @@ article.slikex{
         text-align: center;
 }
 
+#slike_preko_mob{
+    display: none;    
+}
 
+
+@media only screen and (min-width: 450px) {
+    
+    #slike_mob{
+        display: none;
+    }
+    
+    #slike_preko_mob{
+        display: block;    
+    }          
+}
 /*Small desktop from 651px*/
 @media only screen and (min-width: 651px) {
     #burger{
@@ -273,7 +292,8 @@ article.slikex{
         text-align: right;               
     }
     
-     #futimg{       
+     #futimg{
+        /*float: right;*/
         margin: auto;       
     }
     
@@ -284,11 +304,10 @@ article.slikex{
 }
 
 @media only screen and (min-width: 799px) {
-   
      article.slikex{                              
             display: flex;
             align-items: center;
-            justify-content: space-between;                                
+            justify-content: space-between;        
     }   
 }
 
